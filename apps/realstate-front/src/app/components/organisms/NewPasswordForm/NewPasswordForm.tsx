@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Toast } from '../../atoms';
 import { Form, FormField } from '../../molecules';
+import { useNavigate } from 'react-router-dom';
 
 interface NewPasswordFormProps {
   children?: React.ReactNode;
@@ -11,6 +12,7 @@ export const NewPasswordForm: React.FC<NewPasswordFormProps> = ({ children }) =>
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [toast, setToast] = useState(<>""</>);
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,6 +25,9 @@ export const NewPasswordForm: React.FC<NewPasswordFormProps> = ({ children }) =>
     if(password === passwordConfirmation && password.length > 0 && passwordConfirmation.length > 0) {
       setToast(<Toast type="success" message={'Passwords match'}  />);
       setIsVisible(true);
+      setTimeout(() => {
+        navigate('/');
+      }, 3000); 
     }else {
       setToast(<Toast type="error" message={`Passwords doesn't match, please try again `}  />);
       setIsVisible(true);
