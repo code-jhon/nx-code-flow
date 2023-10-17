@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Img } from "../../atoms";
+import { Text, Img, Link } from "../../atoms";
 import AppleIcon from '../../../../assets/icons/apple-icon.svg';
 import GoogleIcon from '../../../../assets/icons/google-icon.svg';
 import FacebookIcon from '../../../../assets/icons/facebook-icon.svg';
@@ -7,18 +7,19 @@ import FacebookIcon from '../../../../assets/icons/facebook-icon.svg';
 export const Footer:React.FC = () => {
   return (
     <>
-      <div className="flex justify-center mt-4">
-        <Text textType="p" className="text-gray-600">Or sign in with</Text>
+      <div className="relative flex justify-center mt-4 mb-4">
+        <div className="w-3/4 h-px bg-gray-300 m-3"></div>
+        <Text textType="p" className="text-gray-400 absolute bg-white inset-y-1 flex items-center text-sm leading-5 p-2 ">Or sign in with</Text>
       </div>
       
       <div className="flex justify-center mt-2 p-4">
-        <Img src={AppleIcon} className="w-10 h-10 rounded-full mx-4 p-2 hover:scale-105 cursor-pointer border-solid border-slate-950" alt="Apple Icon" />
-        <Img src={GoogleIcon} className="w-10 h-10 rounded-full mx-4 p-2 hover:scale-105 cursor-pointer border-solid border-slate-950" alt="Google Icon" />
-        <Img src={FacebookIcon} className="w-10 h-10 rounded-full mx-4 p-2 hover:scale-105 cursor-pointer border-solid border-slate-950" alt="Facebook Icon" />
+        <Img src={AppleIcon} className="w-14 rounded-full mx-4 p-4 hover:scale-105 cursor-pointer border-solid border border-gray-300" alt="Apple Icon" />
+        <Img src={GoogleIcon} className="w-14 rounded-full mx-4 p-4 hover:scale-105 cursor-pointer border-solid border border-gray-300" alt="Google Icon" />
+        <Img src={FacebookIcon} className="w-14 rounded-full mx-4 p-4 hover:scale-105 cursor-pointer border-solid border border-gray-300" alt="Facebook Icon" />
       </div>
       
-      <div className="flex justify-center mt-4">
-        <Text textType="p" className="text-gray-600">Don't have an account? <span className="text-blue-500 hover:underline cursor-pointer">Sign Up</span></Text>
+      <div className="flex justify-center mt-6">
+        <Text textType="p" className="text-sm text-gray-600">Don't have an account? <Link to="/sign-up" textType="span">Sign Up</Link></Text>
       </div>
     </>
   )
