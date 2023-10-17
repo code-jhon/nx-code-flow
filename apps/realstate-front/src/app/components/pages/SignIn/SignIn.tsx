@@ -2,8 +2,10 @@ import { SignInTemplate } from "../../templates";
 
 const SignIn = () => {
   return (
-    <SignInTemplate />
+    <SignInTemplate>
+      
+    </SignInTemplate>
   )
 }
 
-export default SignIn
+export default SignIn 
