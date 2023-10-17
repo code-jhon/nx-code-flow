@@ -1,11 +1,9 @@
-import React from 'react'
+import { Header } from "../../organisms";
+import { SignInTemplate } from "../../templates";
 
 const SignIn = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-
+    <SignInTemplate />
   )
 }
 

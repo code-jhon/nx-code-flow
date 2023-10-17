@@ -2,13 +2,12 @@
 import React from 'react'
 
 interface TextProps {
-  text: string;
   className?: string;
   textType: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
   children?: React.ReactNode | string;
 }
 
-const Text: React.FC<TextProps> = ({ text, className="", textType, children }) => {
+const Text: React.FC<TextProps> = ({ className="", textType, children }) => {
   switch (textType) {
     case 'h1':
       return <h1 className={className}>{children}</h1>
