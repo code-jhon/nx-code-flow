@@ -4,12 +4,19 @@ import AppleIcon from '../../../../assets/icons/apple-icon.svg';
 import GoogleIcon from '../../../../assets/icons/google-icon.svg';
 import FacebookIcon from '../../../../assets/icons/facebook-icon.svg';
 
-export const Footer:React.FC = () => {
+interface FooterProps {
+  footerTitle: string;
+  footerText: string;
+  footerCta: string;
+  ctaDestination: string;
+}
+
+export const Footer:React.FC<FooterProps> = ({footerTitle, footerText, footerCta, ctaDestination}) => {
   return (
     <>
       <div className="relative flex justify-center mt-4 mb-4">
         <div className="w-3/4 h-px bg-gray-300 m-3"></div>
-        <Text textType="p" className="text-gray-400 absolute bg-white inset-y-1 flex items-center text-sm leading-5 p-2 ">Or sign in with</Text>
+        <Text textType="p" className="text-gray-400 absolute bg-white inset-y-1 flex items-center text-sm leading-5 p-2 ">{footerTitle}</Text>
       </div>
       
       <div className="flex justify-center mt-2 p-4">
@@ -19,7 +26,7 @@ export const Footer:React.FC = () => {
       </div>
       
       <div className="flex justify-center mt-6">
-        <Text textType="p" className="text-sm text-gray-600">Don't have an account? <Link to="/sign-up" textType="span">Sign Up</Link></Text>
+        <Text textType="p" className="text-sm text-gray-600">{footerText} <Link to={ctaDestination} textType="span">{footerCta}</Link></Text>
       </div>
     </>
   )

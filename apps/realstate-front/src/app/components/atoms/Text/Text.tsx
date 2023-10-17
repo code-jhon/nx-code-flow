@@ -1,4 +1,4 @@
-// write a component that renders a title with a given text
+// write a component that renders a title with a given text, this single component was written using AI
 import React from 'react'
 
 interface TextProps {

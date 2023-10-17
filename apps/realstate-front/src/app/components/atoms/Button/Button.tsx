@@ -6,9 +6,10 @@ interface ButtonProps {
   fullWidth?: boolean;
   rounded?: boolean;
   onClick?: () => void;
+  disabled: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, variant = 'primary', onClick, fullWidth, rounded }) => {
+const Button: React.FC<ButtonProps> = ({ label, variant = 'primary', onClick, fullWidth, rounded, disabled }) => {
   let buttonStyles = 'px-6 py-2 rounded focus:outline-none';
 
   if (variant === 'primary') {
@@ -25,8 +26,12 @@ const Button: React.FC<ButtonProps> = ({ label, variant = 'primary', onClick, fu
     buttonStyles += ' rounded-full';
   }
 
+  if (disabled) {
+    buttonStyles += ' opacity-50 cursor-not-allowed';
+  }
+
   return (
-    <button className={buttonStyles} onClick={onClick}>
+    <button className={buttonStyles} onClick={onClick} disabled={disabled}>
       {label}
     </button>
   );
