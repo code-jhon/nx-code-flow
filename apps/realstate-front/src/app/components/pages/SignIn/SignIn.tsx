@@ -1,9 +1,12 @@
-import React from 'react'
+import { SignInTemplate } from "../../templates";
+import { SignInForm } from "../../organisms/SignInForm/SignInForm";
 
 const SignIn = () => {
   return (
-    <div>HOLAAAA</div>
+    <SignInTemplate>
+      <SignInForm />
+    </SignInTemplate>
   )
 }
 
-export default SignIn
+export default SignIn 
