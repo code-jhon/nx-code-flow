@@ -1,5 +1,5 @@
 import { SignInTemplate } from "../../templates";
-import { SignInForm } from "../../organisms/SignInForm/SignInForm";
+import { SignInForm } from "../../organisms/"
 
 const SignIn = () => {
   return (

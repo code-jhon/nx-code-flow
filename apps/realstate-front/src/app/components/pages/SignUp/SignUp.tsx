@@ -1,10 +1,10 @@
 import { SignUpTemplate } from "../../templates";
-import { SignInForm } from "../../organisms/SignInForm/SignInForm";
+import { SignUpForm } from "../../organisms/"
 
 const SignIn = () => {
   return (
     <SignUpTemplate>
-      <SignInForm />
+      <SignUpForm />
     </SignUpTemplate>
   )
 }
