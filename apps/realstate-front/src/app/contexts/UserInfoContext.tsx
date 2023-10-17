@@ -1,5 +1,4 @@
 import {useState, createContext} from 'react';
-
 interface UserInfoProviderProps {
   children: React.ReactNode;
 }
@@ -15,7 +14,7 @@ const initialStates: UserInfoContextProps = {
   email: '',
   setEmail: () => '',
   password: '',
-  setPassword: () => '',
+  setPassword: () => ''
 };
 
 export const UserInfoContext = createContext(initialStates);
