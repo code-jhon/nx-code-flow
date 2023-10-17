@@ -3,6 +3,8 @@ import * as ReactDOM from 'react-dom/client';
 import { RouterProvider } from "react-router-dom";
 import { router } from './app/utils/routes';
 
+import { UserInfoProvider } from './app/contexts/UserInfoContext';
+
 import './app/app.css';
 
 const root = ReactDOM.createRoot(
@@ -10,6 +12,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <UserInfoProvider>
+      <RouterProvider router={router} />
+    </UserInfoProvider>
   </StrictMode>
 );
