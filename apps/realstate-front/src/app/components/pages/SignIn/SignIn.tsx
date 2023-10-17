@@ -1,4 +1,3 @@
-import { Header } from "../../organisms";
 import { SignInTemplate } from "../../templates";
 
 const SignIn = () => {
