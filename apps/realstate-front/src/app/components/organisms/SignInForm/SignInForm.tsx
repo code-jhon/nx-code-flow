@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Form, FormField } from '../../molecules';
 
+import { UserInfoContext } from '../../../contexts/UserInfoContext';
 interface SignInFormProps {
   children?: React.ReactNode;
 }
 
 export const SignInForm: React.FC<SignInFormProps> = ({ children }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const { email, setEmail, password, setPassword } = useContext(UserInfoContext);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
