@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from "../"
 
 interface CheckboxProps {
   fieldName: string;
