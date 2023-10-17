@@ -1,10 +1,10 @@
 import { NewPasswordTemplate } from "../../templates";
-import { VerifyCodeForm } from "../../organisms/"
+import { NewPasswordForm } from "../../organisms/"
 
 const NewPassword = () => {
   return (
     <NewPasswordTemplate>
-      <VerifyCodeForm />
+      <NewPasswordForm />
     </NewPasswordTemplate>
   )
 }
