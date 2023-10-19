@@ -7,7 +7,7 @@ interface TextProps {
   children?: React.ReactNode | string;
 }
 
-const Text: React.FC<TextProps> = ({ className="", textType, children }) => {
+export const Text: React.FC<TextProps> = ({ className="", textType, children }) => {
   switch (textType) {
     case 'h1':
       return <h1 className={className}>{children}</h1>
@@ -29,5 +29,3 @@ const Text: React.FC<TextProps> = ({ className="", textType, children }) => {
       return <h1 className={className}>{children}</h1>
   }
 }
-
-export default Text

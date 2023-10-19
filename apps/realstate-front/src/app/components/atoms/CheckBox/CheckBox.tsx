@@ -10,7 +10,7 @@ interface CheckboxProps {
   linkCTA?: () => void;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ checked, label, changeAction, fieldName, additionalStyles, linkToModal, linkCTA }) => {
+export const CheckBox: React.FC<CheckboxProps> = ({ checked, label, changeAction, fieldName, additionalStyles, linkToModal, linkCTA }) => {
   return (
     <label className="flex items-center mb-4">
       <input
@@ -24,5 +24,3 @@ const Checkbox: React.FC<CheckboxProps> = ({ checked, label, changeAction, field
     </label>
   );
 };
-
-export default Checkbox;

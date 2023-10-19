@@ -26,6 +26,8 @@
     "src/**/*.stories.tsx",
     "src/**/*.stories.mdx",
     ".storybook/*.js",
-    ".storybook/*.ts"
+    ".storybook/*.ts",
+    "src/app/components/atoms/Anchor/Anchor.stories.tsx", 
+    "src/app/components/atoms/Button/Button.stories.tsx"
   ]
 }

@@ -14,8 +14,7 @@ interface InputProps {
   innerRef?: string | React.RefObject<HTMLInputElement>;
 }
 
-
-const Input: React.FC<InputProps> = ({ placeholder, type, fieldId, className, state, setState, size="full", innerRef="" }) => {
+export const Input: React.FC<InputProps> = ({ placeholder, type, fieldId, className, state, setState, size="full", innerRef="" }) => {
   const [show, setShow] = useState(false);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setState(e.target.value);
@@ -40,5 +39,3 @@ const Input: React.FC<InputProps> = ({ placeholder, type, fieldId, className, st
     </div>
   )
 } 
-
-export default Input
