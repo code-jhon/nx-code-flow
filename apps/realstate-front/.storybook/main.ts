@@ -1,8 +1,19 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-  stories: ['../src/app/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
+  stories: ['../src/app/**/*.stories.tsx'],
+  addons: [
+    '@storybook/addon-essentials', 
+    '@storybook/addon-interactions',     
+    'storybook-addon-sass-postcss',
+    'storybook-tailwind-dark-mode',
+    {
+      name: "@storybook/addon-styling",
+      options: {
+        postCss: true,
+      },
+    },
+  ],
   framework: {
     name: '@storybook/react-vite',
     options: {

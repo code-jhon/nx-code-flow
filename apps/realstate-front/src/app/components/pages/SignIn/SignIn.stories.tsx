@@ -11,10 +11,6 @@ const meta: Meta<typeof SignIn> = {
 export default meta;
 type Story = StoryObj<typeof SignIn>;
 
-export const Primary = {
-  args: {},
-};
-
 export const Heading: Story = {
   args: {},
   play: async ({ canvasElement }) => {

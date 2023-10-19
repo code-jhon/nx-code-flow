@@ -4,9 +4,10 @@ interface ToastProps {
   message: string;
   duration?: number; // in milliseconds
   type?: 'success' | 'error' | 'info';
+  isSB?: boolean;
 }
 
-const Toast: React.FC<ToastProps> = ({ message, duration = 3000, type = 'info' }) => {
+export const Toast: React.FC<ToastProps> = ({ message, duration = 3000, type = 'info', isSB=false }) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -35,10 +36,8 @@ const Toast: React.FC<ToastProps> = ({ message, duration = 3000, type = 'info' }
   }
 
   return (
-    <div className={`fixed bottom-4 right-4 p-4 rounded shadow-lg text-white ${bgColor}`}>
+    <div className={`${isSB ? '' : 'fixed'} bottom-4 right-4 p-4 rounded shadow-lg text-white ${bgColor}`}>
       {message}
     </div>
   );
 };
-
-export default Toast;
