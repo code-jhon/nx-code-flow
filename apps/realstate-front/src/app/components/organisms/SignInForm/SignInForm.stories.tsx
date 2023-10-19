@@ -6,7 +6,8 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof SignInForm> = {
   component: SignInForm,
-  title: 'SignInForm',
+  tags: ['autodocs'],
+  title: 'organisms/SignInForm',
 };
 export default meta;
 type Story = StoryObj<typeof SignInForm>;
