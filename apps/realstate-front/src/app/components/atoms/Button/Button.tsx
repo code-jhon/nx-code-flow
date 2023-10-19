@@ -9,7 +9,7 @@ interface ButtonProps {
   disabled: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, variant = 'primary', onClick, fullWidth, rounded, disabled }) => {
+export const Button: React.FC<ButtonProps> = ({ label, variant = 'primary', onClick, fullWidth, rounded, disabled }) => {
   let buttonStyles = 'px-6 py-2 rounded focus:outline-none';
 
   if (variant === 'primary') {
@@ -36,5 +36,3 @@ const Button: React.FC<ButtonProps> = ({ label, variant = 'primary', onClick, fu
     </button>
   );
 };
-
-export default Button;

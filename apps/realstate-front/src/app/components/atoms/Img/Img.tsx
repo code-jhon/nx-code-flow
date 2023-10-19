@@ -6,10 +6,8 @@ interface ImageProps {
   className?: string;
 }
 
-const Img: React.FC<ImageProps> = ({ src, alt, className }) => {
+export const Img: React.FC<ImageProps> = ({ src, alt, className }) => {
   return (
     <img src={src} alt={alt} className={className} />
   )
 }
-
-export default Img;
