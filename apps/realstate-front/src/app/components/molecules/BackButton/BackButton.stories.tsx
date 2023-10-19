@@ -6,7 +6,8 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof BackButton> = {
   component: BackButton,
-  title: 'BackButton',
+  tags: ['autodocs'],
+  title: 'Molecules/BackButton',
 };
 export default meta;
 type Story = StoryObj<typeof BackButton>;
