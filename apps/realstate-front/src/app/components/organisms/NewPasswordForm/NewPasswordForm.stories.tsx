@@ -6,7 +6,8 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof NewPasswordForm> = {
   component: NewPasswordForm,
-  title: 'NewPasswordForm',
+  tags: ['autodocs'],
+  title: 'organisms/NewPasswordForm',
 };
 export default meta;
 type Story = StoryObj<typeof NewPasswordForm>;

@@ -6,7 +6,8 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof Header> = {
   component: Header,
-  title: 'Header',
+  tags: ['autodocs'],
+  title: 'organisms/Header',
 };
 export default meta;
 type Story = StoryObj<typeof Header>;
