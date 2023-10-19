@@ -12,12 +12,12 @@ const meta: Meta<typeof Header> = {
 export default meta;
 type Story = StoryObj<typeof Header>;
 
-export const Primary = {
-  args: {},
-};
-
-export const Heading: Story = {
-  args: {},
+export const Default: Story = {
+  args: {
+    headerText: 'Welcome to Header!',
+    subHeaderText: 'Welcome to Header!',
+    subText: 'Welcome to Header!',
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(/Welcome to Header!/gi)).toBeTruthy();

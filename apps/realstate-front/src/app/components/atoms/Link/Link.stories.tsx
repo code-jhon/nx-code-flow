@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { MemoryRouter } from 'react-router-dom';
 import {Link} from './Link';
 
 import { within } from '@storybook/testing-library';
@@ -8,6 +9,7 @@ const meta: Meta<typeof Link> = {
   component: Link,
   tags: ['autodocs'],
   title: 'Atoms/Link',
+  decorators: [(Story) => <MemoryRouter><Story/></MemoryRouter>],
 };
 export default meta;
 type Story = StoryObj<typeof Link>;
@@ -17,6 +19,7 @@ export const Paragraph = {
     children: 'Welcome to Link!',
     to: '/',
     textType: 'p',
+    isSB: true,
   },
 };
 
@@ -25,6 +28,7 @@ export const Heading: Story = {
     children: 'Welcome to Link!',
     to: '/',
     textType: 'h1',
+    isSB: true,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -37,6 +41,7 @@ export const Heading2 = {
     children: 'Welcome to Link!',
     to: '/',
     textType: 'h2',
+    isSB: true,
   },
 };
 
@@ -45,6 +50,7 @@ export const Heading3 = {
     children: 'Welcome to Link!',
     to: '/',
     textType: 'h3',
+    isSB: true,
   },
 };
 
@@ -53,6 +59,7 @@ export const Heading4 = {
     children: 'Welcome to Link!',
     to: '/',
     textType: 'h4',
+    isSB: true,
   },
 };
 
@@ -61,6 +68,7 @@ export const Heading5 = {
     children: 'Welcome to Link!',
     to: '/',
     textType: 'h5',
+    isSB: true,
   },
 };
 
@@ -69,6 +77,7 @@ export const Heading6 = {
     children: 'Welcome to Link!',
     to: '/',
     textType: 'h6',
+    isSB: true,
   },
 };
 
@@ -77,5 +86,6 @@ export const Span = {
     children: 'Welcome to Link!',
     to: '/',
     textType: 'span',
+    isSB: true,
   },
 };
